@@ -2,7 +2,7 @@
 
 > - Difficulty: Easy
 > - Type: Arrays & Hashing
-> - [link](https://https://leetcode.com/problems/two-sum/)
+> - [link](https://leetcode.com/problems/two-sum/)
 
 ## Solution
 - Time complexity: O(n) - Iterate 'nums' array
