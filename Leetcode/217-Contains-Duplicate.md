@@ -1,4 +1,4 @@
-# Two Sum
+# Contains Duplicate
 
 > - Difficulty: Easy
 > - Type: Arrays & Hashing
