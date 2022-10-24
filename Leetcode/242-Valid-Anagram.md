@@ -6,18 +6,22 @@
 
 ## Solution
 - Time complexity: O(s + t) - Iterate through both of the strings.
-- Space complexity:O(s + T) - Building hash maps potentially up to the size s + t.
+- Space complexity:O(s + t) - Building hash maps potentially up to the size s + t.
 
 ```python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        countS = {}
+        countT = {}
+        
         if len(s) != len(t):
             return False
-
-        countS, countT = {}, {}
-
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)
-            countT[t[i]] = 1 + countT.get(t[i], 0)
+        
+        for c in s:
+            countS[c] = countS.get(c, 0) + 1
+            
+        for c in t:
+            countT[c] = countT.get(c, 0) + 1
+        
         return countS == countT
 ```
