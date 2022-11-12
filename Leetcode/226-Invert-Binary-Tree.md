@@ -74,3 +74,14 @@ if __name__ == '__main__':
     invertBinaryTree(root)
     preOrderTraversal(root)
 ```
+
+
+
+
+
+
+
+
+
+
+
