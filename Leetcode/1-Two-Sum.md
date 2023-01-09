@@ -32,6 +32,6 @@ class Solution:
         for i in range(len(nums)):
             complement = target - nums[i]
             if complement in hashmap:
-                return [i, hashmap[complement]]
+                return [hashmap[complement], i]
             hashmap[nums[i]] = i
 ```
