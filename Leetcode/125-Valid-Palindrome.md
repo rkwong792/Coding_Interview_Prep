@@ -1,7 +1,7 @@
 # Valid Palindrome
 
 > - Difficulty: Easy
-> - Type: Arrays & Hashing
+> - Type: Two Pointers
 > - [link](https://leetcode.com/problems/valid-palindrome/)
 
 ## Solution
