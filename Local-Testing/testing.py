@@ -4,13 +4,14 @@ from typing import List
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         
-        # Sort the input array so the problem becomes a problem we solved from Two Sum II using two pointers.
-
         res = []
         nums.sort()
 
         for i, a in enumerate(nums):
-            
+            # Skip positive integers
+            if a > 0:
+                break
+
             if i > 0 and a == nums[i - 1]:
                 continue
 
@@ -24,7 +25,7 @@ class Solution:
                 else:
                     res.append([a, nums[l], nums[r]])
                     l += 1
-                    # r -= 1
+                    r -= 1
                     while nums[l] == nums[l - 1] and l < r:
                         l += 1
                         
