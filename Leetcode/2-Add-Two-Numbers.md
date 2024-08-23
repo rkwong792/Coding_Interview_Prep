@@ -5,8 +5,8 @@
 > - [link](https://leetcode.com/problems/add-two-numbers/)
 
 ## Solution
-- Time complexity: 
-- Space complexity:
+- Time complexity: O(max(m,n))
+- Space complexity: O(max(m,n)) # We are storing our result in a new linked list.
 - Singly Linked List
 
 ```python
@@ -21,7 +21,13 @@ class ListNode:
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         head = ListNode()
-        cur = head # head is used as a pointer to the beginning of the linked list, while cur is used to build out our linked list
+        cur = head 
+        # head is used as a pointer to the beginning of the linked list, while cur is used to build out our linked list
+        
+        # "Shared Reference" in Python
+        # 1) Creates an object ListNode
+        # 2) Creates variable head, and reference to this new object
+        # 3) Create variable cur, and references the same object that head does
 
         carry = 0
         while l1 or l2:
