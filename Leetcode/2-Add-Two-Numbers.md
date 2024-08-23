@@ -1,3 +1,15 @@
+# Add Two Numbers
+
+> - Difficulty: Medium
+> - Type: Linked List
+> - [link](https://leetcode.com/problems/add-two-numbers/)
+
+## Solution
+- Time complexity: 
+- Space complexity:
+- Singly Linked List
+
+```python
 # Insert class definition here:
 from typing import List
 from typing import Optional
@@ -20,7 +32,7 @@ class Solution:
             # new digit
             val = v1 + v2 + carry
             carry = val // 10
-            val = val % 10 # Python uses floor division (rounds down)
+            val = val % 10
             cur.next = ListNode(val)
 
             # update ptrs
@@ -35,11 +47,12 @@ class Solution:
 myObj = Solution()
 
 # Test Cases - Singly Linked List
-l1 = ListNode(9, ListNode(6, ListNode(4)))
-l2 = ListNode(9, ListNode(4, ListNode(3, ListNode(3))))
+l1 = ListNode(5, ListNode(6, ListNode(4)))
+l2 = ListNode(2, ListNode(4, ListNode(3, ListNode(3))))
 
 node = myObj.addTwoNumbers(l1, l2)
 
 while node:
     print(node.val)
     node = node.next
+```
