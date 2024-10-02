@@ -4,7 +4,7 @@
 > - Type: Sliding Window
 > - [link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
-- Time complexity: O(n)
+- Time complexity: O(n) - Even though we have two loops, in the inner while loop will run at most 'n' times, not per iteration of 'r'
 - Space complexity: O(n) - Set
 
 ```python
