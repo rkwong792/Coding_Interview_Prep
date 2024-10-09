@@ -11,7 +11,8 @@
 ```python
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-                
+        
+        # +1 is important for nums=[1], k=1 edge case
         freq = [[] for i in range(len(nums)+1)]
         
         count = {}
