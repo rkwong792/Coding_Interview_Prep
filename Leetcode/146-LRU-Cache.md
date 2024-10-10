@@ -54,5 +54,5 @@ class LRUCache:
             # remove from the list and delete the LRU from hashmap
             lru = self.left.next
             self.remove(lru)
-            del self.cache[lru.key]
+            del self.cache[lru.key] # We store the key in our Node object in order to use the key to delete from the cache hashmap
 ```
