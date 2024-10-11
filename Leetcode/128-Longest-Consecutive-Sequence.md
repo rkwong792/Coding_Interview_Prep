@@ -7,6 +7,7 @@
 ## Solution
 - Time complexity: O(N)
 - Space complexity: O(N)
+- Sets are significantly faster than lists if you want to check if an item is contained within it. They can only contain unique items though.
 
 ```python
 class Solution:
