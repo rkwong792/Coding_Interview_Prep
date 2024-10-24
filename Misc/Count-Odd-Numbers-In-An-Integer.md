@@ -10,6 +10,8 @@
 - Space complexity: O(1)
 
 ```python
+
+# Method 1
 def countOddNums(num):
 
     # Convert the integer to a string and remove the negative 
@@ -26,5 +28,20 @@ def countOddNums(num):
 print(countOddNums(0))
 print(countOddNums(123))
 print(countOddNums(-123))
+
+# Method 2
+def countOddNums(num):
+
+    # Handle negative numbers
+    num = abs(num)
+    oddCount = 0
+
+    while num > 0:
+        digit = num % 10 # Get the last digit
+        if digit % 2 == 1: # Check if the digit is odd
+            oddCount +=1
+        num //= 10  # Remove the last digit using floor division, rounds the result down to the nearest whole number
+    
+    return oddCount
 
 ```
