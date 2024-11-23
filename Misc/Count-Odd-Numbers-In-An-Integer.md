@@ -21,6 +21,7 @@ def countOddNums(num):
     oddCount = 0
     # for every character in the string
     for digit in num:
+        # find the remainder of a division between two numbers
         if int(digit) % 2 == 1:
             oddCount +=1
     return oddCount
