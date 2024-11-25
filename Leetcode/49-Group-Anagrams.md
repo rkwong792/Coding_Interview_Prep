@@ -28,5 +28,9 @@ class Solution:
             else:
                 anagrams[sortedString].append(word)
         
-        return anagrams.values()
+        res = []
+        for value in anagrams.values():
+            res.append(value)
+
+        return res
 ```
