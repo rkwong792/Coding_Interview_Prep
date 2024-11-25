@@ -5,8 +5,8 @@
 > - [link](https://leetcode.com/problems/valid-anagram/)
 
 ## Solution
-- Time complexity: O(s + t) - Iterate through both of the strings.
-- Space complexity:O(s + t) - Building hash maps potentially up to the size s + t.
+- Time complexity: O(n)
+- Space complexity: O(n)
 
 ```python
 class Solution:
