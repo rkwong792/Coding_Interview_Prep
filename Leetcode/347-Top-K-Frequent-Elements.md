@@ -5,8 +5,37 @@
 > - [link](https://leetcode.com/problems/top-k-frequent-elements/)
 
 ## Solution
-- Time complexity: O(N) - Need to loop through the the entire list in reverse order in O(N) and also the nested list in O(N) time. 
-- Space complexity: O(N) - We need O(N) space for our hash map and also O(N) space for our list[[]]. O(N) + O(N) = O(N)
+- Time Complexity: O(n * log k)
+- n is the number of elements in the input list nums.
+- k is the number of top frequent elements you want to extract.
+
+- Space Complexity: O(n)
+
+```python
+import heapq
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        count = {}
+        
+        for num in nums:
+            count[num] = count.get(num,0) + 1
+
+        min_heap = []
+
+        for num, freq in count.items():
+            heapq.heappush(min_heap, (-freq, num))
+        
+        res = []
+        for i in range(k):
+            res.append(heapq.heappop(min_heap)[1])
+        
+        return res
+```
+
+## Solution
+- Time complexity: O(n) - Need to loop through the the entire list in reverse order in O(N) and also the nested list in O(N) time. 
+- Space complexity: O(n) - We need O(n) space for our hash map and also O(N) space for our list[[]]. O(n) + O(n) = O(N)
 
 ```python
 class Solution:
