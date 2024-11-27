@@ -39,7 +39,7 @@ class Solution:
 
 
 ## Solution
-- Time complexity: O(N log k)
+- Time complexity: O(N * log k)
 - The loop runs for n elements, and for each element, we perform a heap operation (heappush or heappushpop), each of which takes O(log k) time.
 
 - Space complexity: O(k)
