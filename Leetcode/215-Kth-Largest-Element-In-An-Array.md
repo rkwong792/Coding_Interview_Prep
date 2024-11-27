@@ -49,7 +49,7 @@ class Solution:
 import heapq
 
 class Solution:
-     # Max Heap Solution
+     # Min Heap Solution
     def findKthLargest(self, nums: List[int], k: int) -> int:
         
         # Min Heap Solution
