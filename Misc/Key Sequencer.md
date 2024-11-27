@@ -15,27 +15,27 @@
 class Solution:
     def keySequencer(N):
     
-    # If N is less than 7, the output is itself.
-    # Ex: N = 6 (A, A, A, Ctrl-A, Ctrl C, Ctrl V)
-    if ( N < 7):
-        return N
+        # If N is less than 7, the output is itself.
+        # Ex: N = 6 (A, A, A, Ctrl-A, Ctrl C, Ctrl V)
+        if ( N < 7):
+            return N
 
-    # Store the result:
-    # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    result = [0] * N
+        # Store the result:
+        # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        result = [0] * N
 
-    # Initialize the optimal result list for up to 6 key presses.
-    # [1, 2, 3, 4, 5, 6, 0, 0, 0, 0, 0]
-    for i in range(1, 7): 
-        result[i - 1] = i
-    
-    # If N is greather than 7, calculate M based on i-3, i-4, or i-5 key presses.
-    for i in range(7, N + 1): 
-        result[i - 1] = max(
-            1 * result[i - 3], 
-            2 * result[i - 4], 
-            3 * result[i - 5], 
-            4 * result[i - 6]); 
-          
-    return result[N - 1]
+        # Initialize the optimal result list for up to 6 key presses.
+        # [1, 2, 3, 4, 5, 6, 0, 0, 0, 0, 0]
+        for i in range(1, 7): 
+            result[i - 1] = i
+        
+        # If N is greather than 7, calculate M based on i-3, i-4, or i-5 key presses.
+        for i in range(7, N + 1): 
+            result[i - 1] = max(
+                1 * result[i - 3], 
+                2 * result[i - 4], 
+                3 * result[i - 5], 
+                4 * result[i - 6]); 
+            
+        return result[N - 1]
 ```
