@@ -10,7 +10,7 @@
 - O(N) - heapifying the list 
 - O(K log N) - popping K times, each pop is log N
 - Final heappop - O(log N)
-- Total Time Complexity: O(N + K log N)
+- *** Total Time Complexity: O(N + K log N) ***
 
 - Space complexity: O(1)
 - The heap is stored in place, and the input list nums is modified in place (no extra space is required for storing the heap).

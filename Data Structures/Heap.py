@@ -1,5 +1,8 @@
 import heapq
 
+# You can acess the root of the max/min heap with nums[0] for example. A heap only guarantees that the smallest element (in a min-heap) 
+# or largest element (in a max-heap, using negatives) is at the root. The rest of the elements in the list may not be in sorted order.
+
 # heapq.heappush(heap, item) - Adds the item to the heap while maintaining the heap property.
 
 heap = [1, 3, 5, 7, 9, 2]
