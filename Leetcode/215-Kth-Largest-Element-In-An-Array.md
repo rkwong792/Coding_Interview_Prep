@@ -10,9 +10,9 @@
 - O(N) - heapifying the list 
 - O(K log N) - popping K times, each pop is log N
 - Final heappop - O(log N)
-- *** Total Time Complexity: O(N + K log N) ***
+- **Total Time Complexity: O(N + K log N)**
 
-- Space complexity: O(1)
+- **Space complexity: O(1)**
 - The heap is stored in place, and the input list nums is modified in place (no extra space is required for storing the heap).
 
 ```python
@@ -39,10 +39,10 @@ class Solution:
 
 
 ## Solution
-- Time complexity: O(N * log k)
+- **Time complexity: O(N * log k)**
 - The loop runs for n elements, and for each element, we perform a heap operation (heappush or heappushpop), each of which takes O(log k) time.
 
-- Space complexity: O(k)
+- **Space complexity: O(k)**
 - The space complexity comes from storing the min_heap, which at most contains k elements. This is because the heap will contain only the 𝑘 largest elements in the array at any given point.
 
 ```python
