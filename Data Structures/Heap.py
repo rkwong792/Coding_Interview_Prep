@@ -6,9 +6,6 @@ import heapq
 # Time Complexity of heapq heappush(), heappop(), and heappushpop(): O(log n)
 # Where n is the number of elements in the heap before the push operation.
 
-# In a heapified list for max heap solutions, this would take O(log n) where n is the length of nums.
-# In a min heap solution, where we only need to heappush k times, this would take O(log k).
-
 # heapq.heappush(heap, item) - Adds the item to the heap while maintaining the heap property.
 heap = [1, 3, 5, 7, 9, 2]
 heapq.heapify(heap)  # Turn list into a heap
