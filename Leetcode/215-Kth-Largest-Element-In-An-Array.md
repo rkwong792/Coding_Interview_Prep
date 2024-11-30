@@ -40,7 +40,7 @@ class Solution:
 
 ## Solution
 - `Time complexity: O(N * log k)`
-- The loop runs for n elements, and for each element, we perform a heap operation (heappush or heappushpop), each of which takes O(log k) time.
+- The loop runs for n elements, and for each element, we perform a heap operation (heappush or heappushpop), each of which takes O(log k) time. Each heappushpop() operation takes O(log k), and you perform it n times, giving O(n log k).
 
 - `Space complexity: O(k)`
 - The space complexity comes from storing the min_heap, which at most contains k elements. This is because the heap will contain only the 𝑘 largest elements in the array at any given point.
