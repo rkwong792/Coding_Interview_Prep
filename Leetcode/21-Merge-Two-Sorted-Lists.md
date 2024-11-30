@@ -12,18 +12,25 @@
 class Solution:
     def mergeTwoLists(self, list1, list2):
 
-        dummy = tail = ListNode()
+        dummy = ListNode()
+        current = dummy 
+        # dummy is used as a pointer to the beginning of the linked list, while current is used to build out our linked list
+        
+        # "Shared Reference" in Python
+        # 1) Creates an object ListNode
+        # 2) Creates variable dummy, and reference to this new object
+        # 3) Create variable current, and references the same object that dummy does            
 
         while list1 and list2:
             if list1.val < list2.val:
-                tail.next = list1
+                current.next = list1
                 list1 = list1.next
             else:
-                tail.next = list2
+                current.next = list2
                 list2 = list2.next
-            tail = tail.next
+            current = current.next
 
-        tail.next = list1 or list2
+        current.next = list1 or list2
 
         return dummy.next
 ```
