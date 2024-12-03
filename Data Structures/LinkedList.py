@@ -21,7 +21,7 @@ def printLinkedList(node):
         node = node.next
     print(" -> ".join(values))
 
-printLinkedList(list1
+printLinkedList(list1)
                 
 # Method 2) Helper function to print the linked list
 def printLinkedList(node):
