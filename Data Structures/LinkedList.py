@@ -29,4 +29,4 @@ def printLinkedList(node):
     while node:
         values.append(node.val)
         node = node.next
-    print(" -> ".join(map(str, values)))
+    print(" -> ".join(map(str, values))) 
