@@ -13,7 +13,7 @@ list2 = ListNode(1)
 list2.next = ListNode(3)
 list2.next.next = ListNode(4)
 
-# Helper function to print the linked list
+# Method 1) Helper function to print the linked list
 def printLinkedList(node):
     values = []
     while node:
@@ -21,4 +21,12 @@ def printLinkedList(node):
         node = node.next
     print(" -> ".join(values))
 
-printLinkedList(list1)
+printLinkedList(list1
+                
+# Method 2) Helper function to print the linked list
+def printLinkedList(node):
+    values = []
+    while node:
+        values.append(node.val)
+        node = node.next
+    print(" -> ".join(map(str, values)))
