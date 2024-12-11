@@ -6,7 +6,7 @@
 
 ## Solution
 ### Time Complexity
-- **Initialization**: \( O(n) \)
+- **Initialization**: ( O(n) )
 - **`add()` method**: \( O(log k) \)
 
 ### Space Complexity
