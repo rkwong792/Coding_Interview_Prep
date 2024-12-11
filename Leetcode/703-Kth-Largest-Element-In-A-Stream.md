@@ -5,13 +5,14 @@
 > - [link](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 
 ## Solution
-- Time complexity: 
--   init = O(n)
--   add() = O(log k)
+### Time Complexity
+- **Initialization**: \( O(n) \)
+- **`add()` method**: \( O(\log k) \)
 
-- Space complexity:
--   init = O(k)
--   add() = O(k)
+### Space Complexity
+- **Initialization**: \( O(k) \)
+- **`add()` method**: \( O(k) \)
+
 
 ```python
 import heapq
