@@ -6,12 +6,12 @@
 
 ## Solution
 - Time complexity: 
-- init = O(n)
-- add() = O(log k)
+-   init = O(n)
+-   add() = O(log k)
 
 - Space complexity:
-- init = O(k)
-- add() = O(k)
+-   init = O(k)
+-   add() = O(k)
 
 ```python
 import heapq
