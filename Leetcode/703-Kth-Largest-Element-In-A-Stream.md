@@ -7,11 +7,11 @@
 ## Solution
 ### Time Complexity
 - **Initialization**: ( O(n) )
-- **`add()` method**: \( O(log k) \)
+- **`add()` method**: ( O(log k) )
 
 ### Space Complexity
-- **Initialization**: \( O(k) \)
-- **`add()` method**: \( O(k) \)
+- **Initialization**: ( O(k) )
+- **`add()` method**: ( O(k) )
 
 
 ```python
