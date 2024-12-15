@@ -17,6 +17,7 @@
 ```python
 import heapq
 
+# Note: self. denotes an instance variable of the KthLargest class.
 class KthLargest:
     def __init__(self, k: int, nums: list[int]):
         self.k = k
