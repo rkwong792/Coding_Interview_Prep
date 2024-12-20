@@ -3,7 +3,7 @@
 > - Difficulty: Medium
 > - Type: Two Pointers
 > - [link](https://leetcode.com/problems/sort-colors/)
-
+> - "Dutch Flag Algorithm"
 ## Solution
 - Time complexity: O(n)
 - Space complexity: O(1) (in-place)
