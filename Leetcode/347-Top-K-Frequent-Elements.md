@@ -5,7 +5,11 @@
 > - [link](https://leetcode.com/problems/top-k-frequent-elements/)
 
 ## Min Heap Solution
-- Time Complexity: O(n * log k)
+- Time Complexity: O(n log k)
+    - Counting frequencies: 𝑂(𝑛)
+    - Heap operations: Each heappush/heappushpop takes 𝑂(log ⁡𝑘). Inserting all n elements takes 𝑂(𝑛 log 𝑘)
+    - Extracting k elements: O(k log k)
+    - Total Time Complexity: O(n + n log k + k log k) = O(n log k)
 
 - Space Complexity: O(n + k)
 - Dictionary = O(n)
@@ -40,9 +44,11 @@ class Solution:
 
 
 ## Max Heap Solution
-- Time Complexity: O(n * log k)
-- n is the number of elements in the input list nums.
-- k is the number of top frequent elements you want to extract.
+- Time Complexity: O(n log n)
+    - Counting frequencies: 𝑂(𝑛)
+    - Building the heap with all n elements: 𝑂(𝑛 log ⁡𝑛)
+    - Extracting k elements: 𝑂(𝑘 log ⁡𝑛)
+    - Total Time Complexity: O(n + n log n + k log n) = O(n log n)
 
 - Space Complexity: O(n)
 
