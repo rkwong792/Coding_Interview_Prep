@@ -12,8 +12,10 @@
     - Total Time Complexity: O(n + n log k + k log k) = O(n log k)
 
 - Space Complexity: O(n + k)
-- Dictionary = O(n)
-- Heap = O(k)
+    - Dictionary = O(n)
+    - Heap = O(k)
+    - Result List = O(k)
+    - Total Space Complexity = O(n+k+k)=O(n+k)
 
 ```python
 import heapq
@@ -51,6 +53,11 @@ class Solution:
     - Total Time Complexity: O(n + n log n + k log n) = O(n log n)
 
 - Space Complexity: O(n)
+    - Dictionary = O(n)
+    - Heap = O(n)
+    - Result List = O(k)
+    - Total Space Complexity = O(n+n+k) = O(n+k) = O(n)
+        - Why do we simplify it to O(n) here? → k is small relative to n in this problem.
 
 ```python
 import heapq
