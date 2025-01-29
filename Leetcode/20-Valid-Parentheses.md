@@ -17,7 +17,7 @@ class Solution:
         closeToOpen = {
             "}": "{",
             "]": "[",
-            ")": "()"
+            ")": "("
         }
 
         for c in s:
