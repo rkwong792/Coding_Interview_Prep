@@ -30,3 +30,22 @@ class Solution:
             level += 1
         return level
 ```
+
+## Solution
+- Time complexity: O(n) - Since each node in the tree is visited only once where 'n' is the # of nodes in the tree.
+- Space complexity: O(h) - The key reason is recursion uses the call stack, and the maximum depth of recursion is the height (h) of the tree.
+
+```python
+class Solution:
+    def maxDepth(self, root):
+        
+        # DFS - Recursion
+        
+        if not root:
+            return 0
+
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
+
+        return 1 + max(left, right)
+```
