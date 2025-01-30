@@ -10,6 +10,7 @@
 
 ```python
 class Solution:
+    # DFS - Recursion
     def isSameTree(self, p, q)
         if not p and not q: 
             return True
