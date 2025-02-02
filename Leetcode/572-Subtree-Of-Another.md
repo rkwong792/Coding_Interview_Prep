@@ -6,16 +6,13 @@
 
 ## Solution
 - Time complexity: O(M * N) - Sizes of both trees multiplied together.
-- Space complexity: O(M + N) - Sizes of both trees added together.
+- Space complexity: O(h) - Recursion stack
 
 ```python
 class Solution(object):
     # DFS Solution - 
 
     def isSubtree(self, root, subRoot):
-        if not subRoot:
-            return True
-        
         if not root:
             return False
 
