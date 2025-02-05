@@ -28,9 +28,7 @@ def invertBinaryTree(root):
     if not root:
         return None
 
-    tmp = root.left
-    root.left = root.right
-    root.right = tmp
+    root.left, root.right = root.right, root.left
 
     invertBinaryTree(root.left)
     invertBinaryTree(root.right)
