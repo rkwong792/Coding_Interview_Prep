@@ -14,9 +14,10 @@ class Solution:
         
         # BFS / Level Order Traversal
 
-        q = deque()
-        if root:
-            q.append(root)
+        if not root:
+            return []
+    
+        q = deque([root])
         
         res = []
         while q:
