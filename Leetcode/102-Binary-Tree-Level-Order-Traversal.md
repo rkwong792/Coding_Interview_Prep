@@ -11,11 +11,13 @@
 ```python
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
-        res = []
-        q = collections.deque()
-        if root:
-            q.append(root)
 
+        if not root:
+            return []
+
+        q = deque([root])
+        
+        res = []
         while q:
             val = []
 
