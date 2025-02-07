@@ -18,9 +18,17 @@ class Solution:
             if not node:
                 return 0
 
+            # Is this node a good node?
             res = 1 if node.val >= maxVal else 0
+
+            # Update the highest value seen so far
             maxVal = max(maxVal, node.val)
-            return res + dfs(node.left, maxVal) + dfs(node.right, maxVal)
+
+            # Recursively count good nodes in left and right subtrees
+            res += dfs(node.left, maxVal)
+            res += dfs(node.right, maxVal)
+
+            return res
 
         return dfs(root, root.val)
 ```
