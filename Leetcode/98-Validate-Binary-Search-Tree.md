@@ -10,22 +10,22 @@
 
 ```python
 class Solution:
-    def isValidBST(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
-
-        # Lower / Upper Bound
-        def valid(node, lower, upper):
+    def isValidBST(self, root: TreeNode) -> bool:
+        def dfs(node, min_val, max_val):
             if not node:
-                return True
+                return True  # Base case: Empty tree is always valid
             
-            if not (node.val > lower and node.val < upper):
-                return False
+            if not (min_val < node.val < max_val):
+                return False  # If the node violates BST rules, return False
             
-            return valid(node.left, lower, node.val) and valid(node.right, node.val, upper)
+            # Check left subtree (values must be less than current node)
+            left_valid = dfs(node.left, min_val, node.val)
+            
+            # Check right subtree (values must be greater than current node)
+            right_valid = dfs(node.right, node.val, max_val)
+            
+            return left_valid and right_valid  # Both subtrees must be valid
 
+        return dfs(root, float('-inf'), float('inf'))  # Start with infinite range
 
-        return valid(root, float('-inf'), float('inf'))
 ```
