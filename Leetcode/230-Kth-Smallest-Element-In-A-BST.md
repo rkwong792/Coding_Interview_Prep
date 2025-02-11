@@ -32,21 +32,23 @@ class Solution:
 
 ```python
 class Solution:
-
-    #DFS - In-order traversal Recurison
-
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
+        self.k = k  # Counter for kth element
+        self.result = None  # Store kth smallest element
         
-        stack = []
-        curr = root
+        def inorder(node):
+            if not node or self.result is not None:
+                return
+            
+            inorder(node.left)  # Traverse left subtree
+            
+            self.k -= 1
+            if self.k == 0:
+                self.result = node.val  # Found kth smallest
+                return
+            
+            inorder(node.right)  # Traverse right subtree
         
-        while stack or curr:
-            while curr:
-                stack.append(curr)
-                curr = curr.left
-            curr = stack.pop()
-            k -= 1
-            if k == 0:
-                return curr.val
-            curr = curr.right
+        inorder(root)
+        return self.result
 ```
