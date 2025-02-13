@@ -1,4 +1,4 @@
-# [Name of Problem]
+# Diameter of A Binary Tree
 
 > - Difficulty: Easy
 > - Type: Trees
