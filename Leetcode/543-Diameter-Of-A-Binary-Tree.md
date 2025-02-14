@@ -17,12 +17,13 @@ class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         self.diameter = 0  # Keeps track of the maximum diameter
 
-        def dfs(node):
+        # DFS
+        def height(node):
             if not node:
                 return 0  # Base case: height of null node is 0
             
-            left_height = dfs(node.left)   # Get height of left subtree
-            right_height = dfs(node.right) # Get height of right subtree
+            left_height = height(node.left)   # Get height of left subtree
+            right_height = height(node.right) # Get height of right subtree
             
             # Update the diameter (longest path found so far)
             self.diameter = max(self.diameter, left_height + right_height)
@@ -30,6 +31,6 @@ class Solution:
             # Return height of current node
             return 1 + max(left_height, right_height)
         
-        dfs(root)  # Start DFS from root
+        height(root)  # Start DFS from root
         return self.diameter  # Final diameter value
 ```
