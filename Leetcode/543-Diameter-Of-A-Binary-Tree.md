@@ -8,6 +8,10 @@
 - Time complexity: O(N), where N is the number of nodes in the tree. Each node is visited once.
 - Space complexity: O(H), where H is the height of the tree (recursive stack).
 
+- Note: The longest diameter does not have to go through the root.
+
+![Longest Diameter](./images/longest_diameter.png)
+
 ```python
 class Solution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
