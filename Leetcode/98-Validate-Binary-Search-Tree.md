@@ -26,6 +26,6 @@ class Solution:
             
             return left_valid and right_valid  # Both subtrees must be valid
 
-        return dfs(root, float('-inf'), float('inf'))  # Start with infinite range
+        return dfs(root, float("-inf"), float("inf"))  # Start with infinite range
 
 ```
