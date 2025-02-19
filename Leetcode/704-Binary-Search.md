@@ -17,12 +17,13 @@ class Solution:
         while l <= r:
             mid = (l + r) // 2 # Divison operation rounds down
 
-            if target < nums[mid]:
+            if nums[mid] > target:
+                # we want to search left side
                 r = mid - 1
-            elif target > nums[mid]:
+            elif nums[mid] < target:
+                # we want to search right side
                 l = mid + 1
             else:
                 return mid
-        
         return -1
 ```

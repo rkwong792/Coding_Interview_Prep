@@ -1,53 +1,34 @@
-import heapq
-
-class ListNode:
-    def __init__(self, val = 0, next = None):
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
         self.val = val
-        self.next = next
+        self.left = left
+        self.right = right
 
-list1 = ListNode(1)
-list1.next = ListNode(4)
-list1.next.next = ListNode(5)
+# Construct the tree
+root = TreeNode(5)
+root.left = TreeNode(3)
+root.right = TreeNode(7)
+root.left.left = TreeNode(2)
+root.left.left.left = TreeNode(1)
+root.left.right = TreeNode(6)  # 6 is the right child of 3
+root.left.right.left = TreeNode(4)  # 4 is the left child of 6
 
-list2 = ListNode(1)
-list2.next = ListNode(3)
-list2.next.next = ListNode(4)
+def kthSmallest(root, k):
+    stack = []
+    curr = root
 
-list3 = ListNode(2)
-list3.next = ListNode(6)
-lists = [list1, list2, list3]
+    while True:
+        while curr:
+            stack.append(curr)
+            curr = curr.left
+        
+        curr = stack.pop()
+        k -= 1
+        if k == 0:
+            return curr.val
+        
+        curr = curr.right
 
-def printLinkedList(node):
-    values = []
-    while node:
-        values.append(node.val)
-        node = node.next
-    print("->".join(map(str, values)))
-              
-
-def mergeKLists(lists):
-    # use min-heap
-    min_heap = []
-
-    for i, node in enumerate(lists):
-        if node:
-            heapq.heappush(min_heap, (node.val, i, node))
-
-    dummy = ListNode()
-    current = dummy
-
-    while min_heap:
-        val, i, node = heapq.heappop(min_heap)
-        current.next = node
-        current = current.next
-        node = node.next
-        if node:
-            heapq.heappush(min_heap, (node.val, i, node))
-    
-    return dummy.next
+print(kthSmallest(root, 5))
 
 
-
-printLinkedList(mergeKLists(lists))
-
-# 1->1->2->3->4->4->5->6
