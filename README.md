@@ -31,6 +31,7 @@
 - [153. Find Minimum in Rotated Sorted Array](./Leetcode/153-Find-Minimum-In-Rotated-Sorted-Array.md) Medium
 - [33. Search in Rotated Sorted Array](./Leetcode/33-Search-in-Rotated-Sorted-Array.md) Medium
 - [34. Find First and Last Position of Element in Sorted Array](./Leetcode/34-Find-First-and-Last-Position-of-Element-In-Sorted-Array.md) Medium
+- [875. Koko eating Bananas](./Leetcode/875-Koko-Eating-Bananas.md) Medium
 
 ## Linked List
 - [2. Add Two Numbers](./Leetcode/2-Add-Two-Numbers.md) Medium

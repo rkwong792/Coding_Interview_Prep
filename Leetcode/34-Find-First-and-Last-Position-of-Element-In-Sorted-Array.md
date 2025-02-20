@@ -7,7 +7,7 @@
 ## Solution - Binary Search
 - Time complexity: O(log N)
 - Space complexity: O(1)
-- Hint: When we find target, we continue searching left for the first occurrence and right for the last occurrence.
+- *Hint: When we find target, we continue searching left for the first occurrence and right for the last occurrence.*
 
 ```python
 class Solution:
