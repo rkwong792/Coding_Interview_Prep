@@ -20,16 +20,15 @@ class Solution:
                 
         # For more details, check Approach 3: HashSet and Intelligent Sequence Building on LeetCode.
         
-        numSet = set(nums)
+        num_set = set(nums)
 
-        for num in numSet:
-            longest = 0
-            # the start of a sequence
-            if (num-1) not in numSet:
-                longest = 1
-            
-                while (num+1) in numSet:
-                    longest +=1
-    
+        longest = 0
+
+        for num in num_set:
+            if (num - 1) not in num_set:  # Start of a sequence
+                length = 1
+                while num + length in num_set:
+                    length += 1
+                longest = max(longest, length)
         return longest
 ```
