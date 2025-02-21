@@ -21,16 +21,15 @@ class Solution:
         # For more details, check Approach 3: HashSet and Intelligent Sequence Building on LeetCode.
         
         numSet = set(nums)
-        longest = 0
 
         for num in numSet:
+            longest = 0
+            # the start of a sequence
             if (num-1) not in numSet:
-                next_num = num + 1                
-                length = 1
-                while next_num in numSet:
-                    next_num +=1
-                    length +=1
-                longest = max(longest, length)
-        
+                longest = 1
+            
+                while (num+1) in numSet:
+                    longest +=1
+    
         return longest
 ```
