@@ -7,6 +7,7 @@
 - [217. Contains Duplicate](./Leetcode/217-Contains-Duplicate.md) Easy
 - [242. Valid Anagram](./Leetcode/242-Valid-Anagram.md) Easy
 - [347. Top K Frequent Elements](./Leetcode/347-Top-K-Frequent-Elements.md) Medium
+- [271. Encode and Decode Strings](./Leetcode/271-Encode-And-Decode-Strings.md) Medium
 - [128. Longest Consecutive Sequence](./Leetcode/128-Longest-Consecutive-Sequence.md) Medium
 
 ## Two Pointers
