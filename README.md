@@ -18,9 +18,12 @@
 - [283. Move Zeroes](./Leetcode/283-Move-Zeroes.md) Easy
 - [75. Sort Colors](./Leetcode/75-Sort-Colors.md) Medium
 
+
 ## Sliding Window
 - [121. Best Time to Buy and Sell Stock](./Leetcode/121-Best-Time-to-Buy-and-Sell-Stock.md) Easy
 - [3. Longest Substring Without Repeating Characters](./Leetcode/3-Longest-Substring-Without-Repeating-Characters.md) Medium
+- [424. Longest Repeating Character Replacement](./Leetcode/424-Longest-Repeating-Character-Replacement.md) Medium
+
 
 ## Stack
 - [20. Valid Parentheses](./Leetcode/20-Valid-Parentheses.md) Easy
