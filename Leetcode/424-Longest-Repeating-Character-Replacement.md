@@ -8,11 +8,11 @@
 - Time complexity: O(N) because each character is processed at most twice (once when expanding right and once when moving left).
 - Space complexity: O(1) Space since we only store a small frequency dictionary (at most 26 letters).
 
-- *Hint* Without max_freq (Recalculating Every Time)
-Each time the left pointer moves, we would need to recompute the most frequent character in our window by iterating through count, which takes O(26) = O(1) time since there are only uppercase English letters.
+- *Hint: Without max_freq (Recalculating Every Time)
+Each time the left pointer moves, we would need to recompute the most frequent character in our window by iterating through count, which takes O(26) = O(1) time since there are only uppercase English letters.*
 
-With max_freq (Optimized)
-We keep track of the most frequent character seen so far and avoid recomputation, keeping our solution strictly O(N).
+- *With max_freq (Optimized)
+We keep track of the most frequent character seen so far and avoid recomputation, keeping our solution strictly O(N).*
 
 ```python
 class Solution:
