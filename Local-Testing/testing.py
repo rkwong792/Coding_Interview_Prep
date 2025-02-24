@@ -1,34 +1,53 @@
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+class Codec:
+    def encode(self, strs):
+        encoded_str = ""
+        for word in strs:
+            encoded_str += str(len(word)) + "#" + word
+        return encoded_str
+    
+    def decode(self, s):
+        res = []
+        i = 0
+        while i < len(s):
+            j = i
+            # find where # is
+            while s[j] != '#':
+                j+=1
+            
+            # at this point, j is on #
+            length = int(s[i:j])
+            res.append(s[j+1: j+1+length])
 
-# Construct the tree
-root = TreeNode(5)
-root.left = TreeNode(3)
-root.right = TreeNode(7)
-root.left.left = TreeNode(2)
-root.left.left.left = TreeNode(1)
-root.left.right = TreeNode(6)  # 6 is the right child of 3
-root.left.right.left = TreeNode(4)  # 4 is the left child of 6
-
-def kthSmallest(root, k):
-    stack = []
-    curr = root
-
-    while True:
-        while curr:
-            stack.append(curr)
-            curr = curr.left
+            i = (j+1+length)
         
-        curr = stack.pop()
-        k -= 1
-        if k == 0:
-            return curr.val
-        
-        curr = curr.right
+        return res
 
-print(kthSmallest(root, 5))
+codec = Codec()
 
+# Test case 1
+strs = ["hello", "world"]
+encoded = codec.encode(strs)
+print("Encoded:", encoded)  # Expected: "5#hello5#world"
+decoded = codec.decode(encoded)
+print("Decoded:", decoded)  # Expected: ["hello", "world"]
 
+# Test case 2
+strs = ["abcd", "efgh", "ijkl"]
+encoded = codec.encode(strs)
+print("Encoded:", encoded)  # Expected: "4#abcd4#efgh4#ijkl"
+decoded = codec.decode(encoded)
+print("Decoded:", decoded)  # Expected: ["abcd", "efgh", "ijkl"]
+
+# Test case 3 (empty list)
+strs = []
+encoded = codec.encode(strs)
+print("Encoded:", encoded)  # Expected: ""
+decoded = codec.decode(encoded)
+print("Decoded:", decoded)  # Expected: []
+
+# Test case 4 (list with empty strings)
+strs = ["", "hello", "", "world"]
+encoded = codec.encode(strs)
+print("Encoded:", encoded)  # Expected: "0#0#hello0#0#world"
+decoded = codec.decode(encoded)
+print("Decoded:", decoded)  # Expected: ["", "hello", "", "world"]
