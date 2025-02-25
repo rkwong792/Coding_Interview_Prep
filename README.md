@@ -44,6 +44,7 @@
 - [21. Merge Two Sorted Lists](./Leetcode/21-Merge-Two-Sorted-Lists.md) Easy
 - [206. Reverse Linked List](./Leetcode/206-Reverse-Linked-List.md) Easy
 - [141. Linked List Cycle](./Leetcode/141-Linked-List-Cycle.md) Easy
+- [287. Find the Duplicate Number](./Leetcode/287-Find-the-Duplicate-Number.md) Medium
 - [19. Remove Nth Node From End of List](./Leetcode/19-Remove-Nth-Node-From-End-of-List.md) Medium
 - [143. Reorder List](./Leetcode/143-Reorder-List.md) Medium
 - [146. LRU Cache](./Leetcode/146-LRU-Cache.md) Medium
