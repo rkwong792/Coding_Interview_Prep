@@ -5,7 +5,7 @@
 > - [link](https://leetcode.com/problems/combination-sum)
 
 ## Solution
-Leetcode/images/Time & Space Complexity - LC 39.png
+![Time & Space Complexity](./images/39_time_and_space_complexity.png)
 
 ```python
 class Solution:
