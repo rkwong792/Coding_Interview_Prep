@@ -70,6 +70,7 @@
 - [23. Merge K Sorted Lists](./Leetcode/23-Merge-K-Sorted-Lists.md) Hard
 
 ## Backtracking
+- [39. Combination Sum](./Leetcode/39-Combination-Sum.md) Medium
 
 ## Graphs
 - [200. Number of Islands](./Leetcode/200-Number-of-Islands.md) Medium
