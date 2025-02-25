@@ -49,3 +49,17 @@ class Solution:
         
         return candidate
 ```
+
+## Verify the candidate
+```python
+    count = 0
+    for num in nums:
+        if num == candidate:
+            count += 1
+
+    # Return only if it's truly a majority
+    if count > len(nums) // 2:
+        return candidate
+    else:
+        return None  # No majority element exists
+```
