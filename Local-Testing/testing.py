@@ -1,53 +1,20 @@
-class Codec:
-    def encode(self, strs):
-        encoded_str = ""
-        for word in strs:
-            encoded_str += str(len(word)) + "#" + word
-        return encoded_str
-    
-    def decode(self, s):
-        res = []
-        i = 0
-        while i < len(s):
-            j = i
-            # find where # is
-            while s[j] != '#':
-                j+=1
-            
-            # at this point, j is on #
-            length = int(s[i:j])
-            res.append(s[j+1: j+1+length])
+class Solution:
+    def findDuplicate(nums):
+    # Initialize slow and fast pointers
+    slow, fast = nums[0], nums[0]
 
-            i = (j+1+length)
-        
-        return res
+    # Phase 1: Find intersection point in the cycle (by going 2x & 1x )
+    while True:
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+        if slow == fast:
+            break
 
-codec = Codec()
+    # Phase 2: Find the where the cycle is (by resetting both to 1x speed)
+    slow = nums[0]
+    while slow != fast:
+        slow = nums[slow]
+        fast = nums[fast]
 
-# Test case 1
-strs = ["hello", "world"]
-encoded = codec.encode(strs)
-print("Encoded:", encoded)  # Expected: "5#hello5#world"
-decoded = codec.decode(encoded)
-print("Decoded:", decoded)  # Expected: ["hello", "world"]
+    return slow
 
-# Test case 2
-strs = ["abcd", "efgh", "ijkl"]
-encoded = codec.encode(strs)
-print("Encoded:", encoded)  # Expected: "4#abcd4#efgh4#ijkl"
-decoded = codec.decode(encoded)
-print("Decoded:", decoded)  # Expected: ["abcd", "efgh", "ijkl"]
-
-# Test case 3 (empty list)
-strs = []
-encoded = codec.encode(strs)
-print("Encoded:", encoded)  # Expected: ""
-decoded = codec.decode(encoded)
-print("Decoded:", decoded)  # Expected: []
-
-# Test case 4 (list with empty strings)
-strs = ["", "hello", "", "world"]
-encoded = codec.encode(strs)
-print("Encoded:", encoded)  # Expected: "0#0#hello0#0#world"
-decoded = codec.decode(encoded)
-print("Decoded:", decoded)  # Expected: ["", "hello", "", "world"]
