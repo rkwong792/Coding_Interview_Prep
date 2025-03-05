@@ -1,20 +1,50 @@
-class Solution:
-    def findDuplicate(nums):
-    # Initialize slow and fast pointers
-    slow, fast = nums[0], nums[0]
+class TreeNode:
+    def __init__(self, val = 0, left = None, right = None):
+        self.val = val
+        self.left = left
+        self.right = right
+    
+# Write a function to calculate the Maximum Depth of Binary Tree
+'''
+        3
+       / \
+      9   20
+          / \
+        15   7
 
-    # Phase 1: Find intersection point in the cycle (by going 2x & 1x )
-    while True:
-        slow = nums[slow]
-        fast = nums[nums[fast]]
-        if slow == fast:
-            break
+'''
 
-    # Phase 2: Find the where the cycle is (by resetting both to 1x speed)
-    slow = nums[0]
-    while slow != fast:
-        slow = nums[slow]
-        fast = nums[fast]
+def preOrderTraversal(root):
+    if not root:
+        return
+    # print node -> left -> right
 
-    return slow
+    # End paramater in the print statement is used to add any string at the end of the print output.
+    # By default, the print function ends with a newline.
+    print(root.val, end = ' ')
+    preOrderTraversal(root.left)
+    preOrderTraversal(root.right)
+
+def maxDepth(root):
+    # use recursion - post order. left -> right -> root
+    if not root:
+        return 0
+    
+    left_height = maxDepth(root.left)
+    right_height = maxDepth(root.right)
+
+    return 1 + max(left_height, right_height)
+
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20)
+root.right.left = TreeNode(15)
+root.right.right = TreeNode(7)
+
+preOrderTraversal(root)
+print(maxDepth(root))
+
+
+
+
 

@@ -24,6 +24,7 @@
 - [121. Best Time to Buy and Sell Stock](./Leetcode/121-Best-Time-to-Buy-and-Sell-Stock.md) Easy
 - [3. Longest Substring Without Repeating Characters](./Leetcode/3-Longest-Substring-Without-Repeating-Characters.md) Medium
 - [424. Longest Repeating Character Replacement](./Leetcode/424-Longest-Repeating-Character-Replacement.md) Medium
+- [567. Permutation in String](./Leetcode/567-Permutation-in-String.md)
 
 
 ## Stack
