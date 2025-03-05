@@ -7,6 +7,7 @@
 ## Solution
 - Time complexity: O(N)
 - Space complexity: O(1)
+- *Hint: Since the problem only involves lowercase English letters (a–z), we can store frequencies in a list of size 26, instead of using a dictionary. With a dictionary (Counter), comparing frequency maps takes O(k) time where k is the # of unique characters in s1. With an array of size 26, comparison is instant (O(1)*
 
 ```python
 class Solution:
