@@ -9,6 +9,8 @@
 - [169. Majority Element](./Leetcode/169-Majority-Element.md) Easy
 - [347. Top K Frequent Elements](./Leetcode/347-Top-K-Frequent-Elements.md) Medium
 - [271. Encode and Decode Strings](./Leetcode/271-Encode-And-Decode-Strings.md) Medium
+- [238. Product of Array Except Self](./Leetcode/238-Product-of-Array-Except-Self.md) Medium
+- [36. Valid Sudoku](./Leetcode/36-Valid-Sudoku.md) Medium
 - [128. Longest Consecutive Sequence](./Leetcode/128-Longest-Consecutive-Sequence.md) Medium
 
 ## Two Pointers
