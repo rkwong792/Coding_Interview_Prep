@@ -32,6 +32,7 @@
 ## Stack
 - [20. Valid Parentheses](./Leetcode/20-Valid-Parentheses.md) Easy
 - [155. Min Stack](./Leetcode/155-Min-Stack.md) Medium
+- [739. Daily Temperatures](./Leetcode/739-Daily-Temperatures.md) Medium
 
 ## Binary Search
 - [704. Binary Search](./Leetcode/704-Binary-Search.md) Easy
