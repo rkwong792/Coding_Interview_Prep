@@ -77,6 +77,7 @@
 
 ## Backtracking
 - [39. Combination Sum](./Leetcode/39-Combination-Sum.md) Medium
+- [78. Subsets](./Leetcode/78-Subsets.md) Medium
 
 ## Graphs
 - [200. Number of Islands](./Leetcode/200-Number-of-Islands.md) Medium
