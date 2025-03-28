@@ -13,6 +13,7 @@
 - [36. Valid Sudoku](./Leetcode/36-Valid-Sudoku.md) Medium
 - [128. Longest Consecutive Sequence](./Leetcode/128-Longest-Consecutive-Sequence.md) Medium
 - [349. Intersection of Two Arrays](./Leetcode/349-Intersection-of-Two-Arrays.md) Easy
+- [1636. Sort Array by Increasing Frequency](./Leetcode/1636-Sort-Array-by-Increasing-Frequency.md) Easy
 
 ## Two Pointers
 - [125. Valid Palindrome](./Leetcode/125-Valid-Palindrome.md) Easy
